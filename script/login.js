@@ -1,12 +1,14 @@
 const myinfo = {
     id: "myname",
-    pw: "mypassword"
+    pw: "mypassword",
+    name: "이지홍"
 };
 
 const infoCheck = (id, pw) => {
     if(id === myinfo.id){
         if(pw === myinfo.pw){
-            console.log(`환영합니다`)
+            window.location="/html/cafe.html";
+            console.log(`환영합니다 $(myinfo.name)님`);
         } else {
             console.log(`로그인 실패`);
         }

@@ -1,3 +1,4 @@
+
 ├── index.html(login) ├──  cafeList ─ seat ─ reserve(도착시간, 이용시간) 
 │                     └──  myReservation(내 예약 확인)
 │                     

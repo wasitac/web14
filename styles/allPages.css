@@ -2,17 +2,21 @@
   min-height: 100vh;
   display: grid;
 }
-h1 {
+.header {
   color: #f2f1e7;
-  height: 20% 30px;
+  height: 20vh;
+  min-height: 60px;
   width: 100%;
   background-color: #a96851;
-  text-align: left;
-  padding: 10px 10px 10px 10px;
+  text-align: center;
 }
+
 body {
   background-color: #f2f1e7;
+  margin: 0;
+  padding: 0;
 }
+
 .main {
   text-align: center;
 }

@@ -4,6 +4,7 @@ const myinfo = {
     pw: "mypassword",
     name: "이지홍"
 };
+
 //로그인 실패 알람
 const showAlarm = (failedAlert) => {
     failedAlert.style.display = "block";
@@ -12,14 +13,15 @@ const showAlarm = (failedAlert) => {
     }, 1000);
   }
 
-
+  
+  
 const infoCheck = () => {
     const id = document.querySelector(".idInput").value;
     const pw = document.querySelector(".pwInput").value;
+    const failedAlert = document.querySelector(".loginFailed");
     if(id === myinfo.id){
         if(pw === myinfo.pw){
             window.location="/html/cafeList.html";
-            console.log(`환영합니다 ${myinfo.name}님`);
         } else {
             showAlarm(failedAlert);  
         }

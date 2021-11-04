@@ -1,25 +1,17 @@
 .join {
-  display: grid;
   font-size: 0.7rem;
   font-weight: bold;
 }
 
-h1,
 .idAndPasswd,
 .join,
 .login {
-  margin: 10px 40px 10px 40px;
+  margin: 10px 30px 10px 30px;
 }
 
 .idAndPasswd {
-  padding-top: 30px;
   display: grid;
-  grid-template-rows: 30px 30px;
-}
-.loginButton {
-  display: grid;
-  grid-template-columns: 1fr 0.1fr 1fr;
-  margin: 10px 40px 10px 40px;
+  grid-template-rows: 40px 40px;
 }
 
 /* 로그인 실패 시 */

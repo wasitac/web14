@@ -4,18 +4,27 @@ const myinfo = {
     pw: "mypassword",
     name: "이지홍"
 };
+//로그인 실패 알람
+const showAlarm = (failedAlert) => {
+    failedAlert.style.display = "block";
+    setTimeout(() => {
+      failedAlert.style.display = "none";
+    }, 1000);
+  }
 
 
-const infoCheck = (id, pw) => {
+const infoCheck = () => {
+    const id = document.querySelector(".idInput").value;
+    const pw = document.querySelector(".pwInput").value;
     if(id === myinfo.id){
         if(pw === myinfo.pw){
-            window.location="/html/cafe.html";
-            console.log(`환영합니다 $(myinfo.name)님`);
+            window.location="/html/cafeList.html";
+            console.log(`환영합니다 ${myinfo.name}님`);
         } else {
-            console.log(`로그인 실패`);
+            showAlarm(failedAlert);  
         }
     } else {
-        console.log(`로그인 실패`);
+        showAlarm(failedAlert);
     }
 };
 

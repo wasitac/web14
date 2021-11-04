@@ -1,2 +1,24 @@
-footer {color:green;
+footer {
+  color: #f2f1e7;
+  width: 100%;
+  font-size: 0.5rem;
+  padding: 10px 10px 10px 10px;
+  background-color: #5c4d4d;
+  text-align: left;
 }
+/* 
+  .first-color { 
+	background: #5c4d4d; 
+}
+	
+.second-color { 
+	background: #915b4a; 
+}
+
+.third-color { 
+	background: #a96851; 
+}
+
+.fourth-color { 
+	background: #f2f1e7; 
+} */

@@ -14,46 +14,28 @@
     <script src="./script/login.js"></script>
     <title>cafe-in</title>
   </head>
-
   <body>
-    <h1>cafe-in</h1>
-    <div class="loginMain fullsize">
+    <div class="fullsize">
+      <div class="header">
+        <h1>cafe-in</h1>
+      </div>
       <!-- 평소엔 가려져있다가 로그인 실패 시 등장 -->
       <section class="loginFailed">
-        <div class="loginFailed" role="alert">로그인 실패!</div>
+        <div class="loginFailed" role="alert">로그인 실패</div>
       </section>
 
       <!-- 아이디 비밀번호 -->
-      <section class="idAndPasswd">
-        <div class="form-floating">
-          <input
-            type="text"
-            name="id"
-            id="idInput"
-            placeholder="아이디"
-            size="20"
-            required
-          />
+      <section class="main">
+        <div class="idAndPasswd">
+          <input type="text" class="idInput" placeholder="아이디" />
+          <input type="text" class="pwInput" placeholder="비밀번호" />
         </div>
-        <div class="form-floating">
-          <input
-            type="text"
-            name="password"
-            id="pwInput"
-            placeholder="비밀번호"
-            size="20"
-            required
-          />
+        <div class="login">
+          <button onclick="infoCheck()">로그인</button>
         </div>
-      </section>
-      <section class="login">
-        <div>
-          <button onclick="infoCheck('myname','mypassword')">로그인</button>
+        <div class="join">
+          <a href="/html/join.html">회원가입</a>
         </div>
-      </section>
-      <!-- 회원가입 -->
-      <section class="join">
-        <a href="/html/join.html">회원가입</a>
       </section>
       <footer>
         <div>웹프실습 14팀</div>

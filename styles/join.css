@@ -1,0 +1,8 @@
+  .userInfo{
+    display: grid;
+    position: relative;
+    left: 25%;
+    width: 50vw;
+    text-align: center;
+  }
+  

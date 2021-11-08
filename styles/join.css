@@ -1,8 +1,12 @@
+  /* input, 확인버튼 가운데 정렬 */
   .userInfo{
-    display: grid;
     position: relative;
     left: 25%;
     width: 50vw;
     text-align: center;
   }
   
+  /* 회원가입 실패 */
+  .joinFailedAlert {
+    display: none;
+  }

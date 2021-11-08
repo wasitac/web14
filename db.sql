@@ -1,11 +1,8 @@
 CREATE TABLE `person` (
     `name` TEXT NOT NULL,
-    `major` TEXT,
-    `studentId` INT NOT NULL PRIMARY KEY,
-    `phoneNumber` INT NOT NULL,
-    `birthday` DATE,
-    `userId` VARCHAR(20) NOT NULL ,
-    `userPw` VARCHAR(20) NOT NULL ,
+    `studentId` INT NOT NULL,
+    `userId` VARCHAR(20) NOT NULL PRIMARY KEY,
+    `userPw` TEXT NOT NULL ,
     `reservation` TIMESTAMP DEFAULT '0000-00-00 00:00:00'
 );
 

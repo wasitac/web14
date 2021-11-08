@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/styles/allPages.css" />
     <link rel="stylesheet" href="/styles/login.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <!-- js -->
+    <script src="./script/login.js"></script>
     <!-- 나눔고딕 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,8 +25,6 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <!-- js -->
-    <script src="./script/login.js"></script>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
 
@@ -38,10 +38,29 @@
       <!-- 아이디 비밀번호 -->
       <div class="main">
         <!-- 평소엔 가려져있다가 로그인 실패 시 등장 -->
-        <div class="loginFailed" role="alert">로그인 실패!</div>
+        <section class="joinFailedAlertContainer">
+          <div
+            class="joinFailedAlert alert alert-danger loginFailed"
+            role="alert"
+          >
+            로그인 실패!
+          </div>
+        </section>
         <div class="idAndPasswd">
-          <input type="text" class="idInput" placeholder="아이디" />
-          <input type="text" class="pwInput" placeholder="비밀번호" />
+          <input
+            class="input-group mb-3 form-control loginId"
+            type="text"
+            placeholder="아이디"
+            aria-label="아이디"
+            aria-describedby="basic-addon1"
+          />
+          <input
+            class="input-group mb-3 form-control loginPw"
+            type="password"
+            placeholder="비밀번호"
+            aria-label="비밀번호"
+            aria-describedby="basic-addon1"
+          />
         </div>
         <div class="login">
           <button type="button" class="btn btn-secondary" onclick="infoCheck()">

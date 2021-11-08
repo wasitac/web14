@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/join.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <!-- javascript -->
+    <script src="../script/join.js"></script>
     <!-- 나눔고딕 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +24,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
     <title>Join</title>
   </head>
   <body>
@@ -30,66 +33,32 @@
       <div class="header">
         <h1>회원가입</h1>
       </div>
-      <div class="userInfo">
-        <form action="userInfo">
+      <!-- 평소엔 가려져있다가 회원가입 실패 시 등장 -->
+      <section class="joinFailedAlertContainer">
+        <div class="joinFailedAlert alert alert-danger" role="alert">
+          회원가입 실패!
+        </div>
+      </section>
+
+      <div>
+        <form class="userInfo">
+          <!-- 아이디 비밀번호는 4-16개의 영어숫자 -->
           <input
+            class="input-group mb-3 form-control idInput"
             type="text"
-            class="form-control"
-            placeholder="이름"
-            aria-label="이름"
+            placeholder="아이디"
+            aria-label="아이디"
             aria-describedby="basic-addon1"
           />
           <input
+            class="input-group mb-3 form-control passwordInput"
             type="text"
-            class="form-control"
-            placeholder="학과"
-            aria-label="학과"
+            placeholder="비밀번호"
+            aria-label="비밀번호"
             aria-describedby="basic-addon1"
           />
-          <input
-            type="number"
-            class="form-control"
-            placeholder="학번"
-            aria-label="학번"
-            aria-describedby="basic-addon1"
-          />
-          <input
-            type="tel"
-            class="form-control"
-            placeholder="전화번호"
-            aria-label="전화번호"
-            aria-describedby="basic-addon1"
-          />
-          <input
-            type="date"
-            class="form-control"
-            placeholder="생일"
-            aria-label="생일"
-            aria-describedby="basic-addon1"
-          />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="사용할 아이디"
-            aria-label="사용할 아이디"
-            aria-describedby="basic-addon1"
-          />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="사용할 비밀번호"
-            aria-label="사용할 비밀번호"
-            aria-describedby="basic-addon1"
-          />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="비밀번호 확인"
-            aria-label="비밀번호 확인"
-            aria-describedby="basic-addon1"
-          />
-          <button class="btn btn-secondary">확인</button>
         </form>
+        <button class="btn btn-secondary" onclick="addUser()">확인</button>
       </div>
       <footer>
         <div>웹프 14팀</div>

@@ -10,8 +10,8 @@ const showAlarm = (failedAlert) => {
   
   //로그인 함수. 
 const infoCheck = async () => {
-    const id = document.querySelector(".idInput").value;
-    const pw = document.querySelector(".pwInput").value;
+    const id = document.querySelector(".loginId").value;
+    const pw = document.querySelector(".loginPw").value;
     const failedAlert = document.querySelector(".loginFailed");
    
     try{
@@ -20,7 +20,7 @@ const infoCheck = async () => {
             pw: pw
     });
 
-    if(response.data){   
+    if(response.data){
         location.replace("/html/cafeList.html");  
       } else {  
         showAlarm(failedAlert);                   
@@ -30,3 +30,7 @@ const infoCheck = async () => {
     }
 };
 
+
+const getUserReservationByUserId = () => {
+  console.log("test");
+}

@@ -1,0 +1,100 @@
+.CafeName{
+    padding: 10px;
+    font-size: 20px;
+    color : #ad968d;
+}
+
+.main{
+    padding: 10px;
+}
+
+.seatInfoframe{
+    display: grid;
+    grid-template-columns: 1fr 588px 1fr;
+}
+
+.seatInfo{
+    width: 588px;
+    height: 630px;
+    background-color : #ad968d;
+}
+
+.reservebutton{
+    background-color : #ad968d;
+    color: #f2f1e7;
+    width: 120px;
+    height: 42px;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 21px;
+}
+
+.seatInfo div{
+    background-color: #f2f1e7;
+    color : #ad968d;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.storeDoor{
+    width: 42px;
+    height: 42px;
+}
+.storeCounter{
+    width: 168px;
+    height: 82px;
+}
+
+.less4seat{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border :1px solid #ad968d;
+}
+
+.rows4seat{
+    width: 82px;
+    height: 40px;
+    border-radius: 20px;
+    border :1px solid #ad968d;
+}
+
+.cols4seat{
+    width: 40px;
+    height: 82px;
+    border-radius: 20px;
+    border :1px solid #ad968d;
+}
+
+.rows6seat{
+    width: 124px;
+    height: 82px;
+    border-radius: 20px;
+    border :1px solid #ad968d;
+}
+
+/* 기존allpage에서 변경점만 분리해서 옮겼어요 */
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 100px 1fr 50px;
+  }
+  
+  .mainframe {
+    display: grid;
+    background-color: #f2f1e7;
+    text-align: center;
+    grid-template-rows: 30px 50px 1fr 30px;
+  }
+  
+  .blank {
+    display: grid;
+    background-color: #f2f1e7;
+    width: 100vw;
+  }
+  

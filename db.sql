@@ -1,7 +1,8 @@
 CREATE TABLE `person` (
     `userId` VARCHAR(20) NOT NULL PRIMARY KEY,
     `userPw` TEXT NOT NULL ,
-    `reservation` TIMESTAMP DEFAULT '0000-00-00 00:00:00'
+    `reservation` TEXT, --예약시간
+    `reserveSeat` TEXT  --예약좌석
 );
 
 

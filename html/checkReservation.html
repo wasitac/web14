@@ -7,6 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/styles/allPages.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/checkReservation.css" />
     <!-- javascript -->
     <script src="../script/checkReservation.js"></script>
     <!-- 나눔고딕 폰트 -->
@@ -33,10 +34,24 @@
 
     <title>cafe-in</title>
   </head>
-  <body>
-    <h1>내 예약</h1>
+  <body class="main">
+    <header>
+      <h1>내 예약</h1>
+    </header>
+    <nav>
+      <span>뒤로가기</span>
+    </nav>
     <div class="loading">loading...</div>
+    <!-- 예약이 없을경우 -->
     <div class="ifNoData">주문이 없네요</div>
-    <div class="myReservation"></div>
+    <!-- 예약이 있을 경우 -->
+    <div class="myReservation">
+      <article>예약내역
+      </article>
+      <section class="buttons">
+        <div>수정하기</div>
+        <div>취소하기</div>
+      </section>
+    </div>
   </body>
 </html>

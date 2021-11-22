@@ -1,5 +1,0 @@
-
-├── index.html(login) ──예약없으면 ─├─  cafeList ─ reserve ├─ myReservation
-│                       예약있으면  └──────────────────────├  
-│                     
-└── join

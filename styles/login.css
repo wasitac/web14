@@ -3,6 +3,7 @@
 }
 
 .idAndPasswd{
+  /* 가운데정렬 */
   position: relative;
   left: 25%;
   max-width: 50vw;

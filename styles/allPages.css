@@ -1,16 +1,18 @@
-
-.fullsize {
+.main {
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  /* 반응형 */
   min-height: 100vh;
   display: grid;
 }
 
-.header {
+header {
   padding-top: 20px;
   color: #f2f1e7;
   height: 15vh;
+  /* 화면 줄였을 때 완전히 사라지지 않게 */
   min-height: 60px;
   background-color: #a96851;
-  text-align: center;
 }
 
 body {
@@ -19,7 +21,9 @@ body {
   padding: 0;
 }
 
-.main {
-  text-align: center;
-  font-family: 'Nanum Gothic', sans-serif;
+/* 예약확인 등의 nav는 오른쪽 위로 고정 */
+nav {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }

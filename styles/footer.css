@@ -4,9 +4,9 @@ footer {
   padding: 10px 10px 10px 10px;
   background-color: #5c4d4d;
   text-align: left;
-  font-family: 'Nanum Gothic', sans-serif;
   width: 100%;
   height: 10vh;
+  /* 제일 아래에 고정 */
   bottom: 0px;
   position: absolute;
 }

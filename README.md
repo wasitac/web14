@@ -8,3 +8,8 @@ Database: MariaDB 15
 -js: 
 
 백엔드:
+
+map
+ index──├──── login ───├─  cafeList ─ reserve
+        │                        └───myReservation
+        └── join

@@ -6,7 +6,7 @@ const check = (re, what) => {
     return false;
   };
   
-  // 알람을 띄웠다가 1초후에 종료
+  //로그인 실패시 알람을 띄웠다가 1초후에 종료
   const showAlarm = (failedAlert) => {
     failedAlert.style.display = "block";
     setTimeout(() => {
@@ -38,7 +38,7 @@ const check = (re, what) => {
       });
       if (response.data) {
         // 회원가입 성공 시
-        location.replace("../html/cafeList.html"); // 메인화면으로 이동
+        location.replace("../html/cafeList.html"); // 카페 리스트로 이동
       } else {
         // 회원가입 실패 시
         showAlarm(failedAlert); // 경고창 띄우고 1초후에 끄기

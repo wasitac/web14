@@ -13,12 +13,10 @@ const getAllUser = async () =>{
     }
 };
 
-const dataTrue
-const dataFalse = null;
 onload = () => {
-    if(dataTrue){
+    if(true){
         document.querySelector(".loading").style.display="none";
-        document.querySelector(".myOrderMain").style.display="block";
+        document.querySelector(".myReservation").style.display="block";
     } else {
         document.querySelector(".loading").style.display="none";
         document.querySelector(".ifNoData").style.display="block";

@@ -1,3 +1,12 @@
-.ifNoData .myOrdermain {
+.ifNoData, .myReservation {
     display: none;
+}
+/* 헤더 15vh 빼고 85vh */
+.myReservation{
+    display: grid;
+    min-height: 85vh;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

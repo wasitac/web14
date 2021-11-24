@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../styles/reserveSeat.css" />
+    <link rel="stylesheet" href="../styles/reserveTime.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    
+    <!-- material icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- javascript -->
+    <script src="../script/reserveSeat.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script/reserveSeat.js"></script>
+
+    <title>예약하기</title>
+    
+  </head>
+  <body>
+    <!-- 시간 및 예약 확정-->
+    <div id="window" class="reserve" style="display: none">
+      <div class="leftblank"></div>
+      <div class="popup" style="position: relative">
+        <!--저장없이 창 닫기-->
+        <img
+          id="close "
+          class="close"
+          src="/image/닫기.png"
+          onclick="popdown()"
+          alt="닫기"
+        />
+        <!--예약자 성명-->
+        <div class="reserveInfo" style="top: 9vh; left: 5vw">예약 명</div>
+        <div>
+          <input class="reserveName" type="text" onchange="setName()" />
+        </div>
+        <!--선택한 좌석-->
+        <div class="reserveInfo" style="top: 19vh; left: 5vw">좌석</div>
+        <div id="printseat" class="seatNum" style="top: 19vh; left: 37vw"></div>
+        <div class="seatNum" style="top: 19vh; left: 43vw">번 석</div>
+        <!--예약날짜 선택-->
+        <div class="reserveInfo" style="top: 29vh; left: 5vw">날짜</div>
+        <div class="inputdate" style="top: 29vh; left: 27vw">
+          <input
+            id="input_date"
+            class="inputdate"
+            type="date"
+            onchange="setDate()"
+            min="new Date()"
+          />
+        </div>
+        <!--예약 시간 선택-->
+        <div class="reserveInfo" style="top: 39vh; left: 5vw">시간</div>
+        <div class="inputdate" style="top: 39vh; left: 27vw">
+          <input
+            id="firsttime"
+            class="input_time"
+            type="text"
+            onchange="startTime()"
+            placeholder="10"
+          />
+          <div
+            class="input_time"
+            style="left: 12vw; font-size: 3vh; border: 0px; bottom: 7px"
+          >
+            /
+          </div>
+          <input
+            id="secondtime"
+            class="input_time"
+            type="text"
+            style="left: 24vw"
+            onchange="endTime()"
+            placeholder="20"
+          />
+        </div>
+      </div>
+      <div class="rightblank"></div>
+      <!--예약 확정-->
+      <div style="position: absolute; left: 35vw; bottom: 2vh">
+        <button id="buttontime" class="reservebutton" onclick="reservation()">
+          예약하기
+        </button>
+      </div>
+    </div>
+
+    <!-- 좌석 및 좌석 선택-->
+    <div class="Container">
+      <header>
+        예약
+      </header>
+      <div class="mainframe">
+        <div class="blank"></div>
+        <div id="PrintCafe" class="printCafeName">Cherish</div>
+        <div class="main">
+          <div class="seatInfoframe">
+            <div class="leftblank"></div>
+            <!--좌석 정보-->
+            <div class="seatInfo" style="position: relative">
+              <div
+                class="storeDoor"
+                style="position: absolute; top: -1.5vh; left: 45vw"
+              >
+                문
+              </div>
+              <div
+                class="storeCounter"
+                style="position: absolute; top: 0px; left: 15vw"
+              >
+                카운터
+              </div>
+              <div
+                id="1"
+                class="rows4seat seat"
+                onclick="SeatButton(1)"
+                style="position: absolute; top: 15vh; left: 0vw"
+              >
+                4인
+              </div>
+              <div
+                id="2"
+                class="rows4seat seat"
+                onclick="SeatButton(2)"
+                style="position: absolute; top: 24vh; left: 0vw"
+              >
+                4인
+              </div>
+              <div
+                id="3"
+                class="less4seat seat"
+                onclick="SeatButton(3)"
+                style="position: absolute; top: 30vh; left: 0vw"
+              >
+                1인
+              </div>
+              <div
+                id="4"
+                class="less4seat seat"
+                onclick="SeatButton(4)"
+                style="position: absolute; top: 36vh; left: 0vw"
+              >
+                1인
+              </div>
+              <div
+                id="5"
+                class="less4seat seat"
+                onclick="SeatButton(5)"
+                style="position: absolute; top: 42vh; left: 5vw"
+              >
+                2인
+              </div>
+              <div
+                id="6"
+                class="less4seat seat"
+                onclick="SeatButton(6)"
+                style="position: absolute; top: 18vh; left: 15vw"
+              >
+                2인
+              </div>
+              <div
+                id="7"
+                class="cols4seat seat"
+                onclick="SeatButton(7)"
+                style="position: absolute; top: 27vh; left: 15vw"
+              >
+                4인
+              </div>
+              <div
+                id="8"
+                class="less4seat seat"
+                onclick="SeatButton(8)"
+                style="position: absolute; top: 18vh; left: 25vw"
+              >
+                2인
+              </div>
+              <div
+                id="9"
+                class="cols4seat seat"
+                onclick="SeatButton(9)"
+                style="position: absolute; top: 27vh; left: 25vw"
+              >
+                4인
+              </div>
+              <div
+                id="10"
+                class="less4seat seat"
+                onclick="SeatButton(10)"
+                style="position: absolute; top: 42vh; left: 25vw"
+              >
+                2인
+              </div>
+              <div
+                id="11"
+                class="rows6seat seat"
+                onclick="SeatButton(11)"
+                style="position: absolute; top: 18vh; left: 35vw"
+              >
+                6인
+              </div>
+              <div
+                id="12"
+                class="rows6seat seat"
+                onclick="SeatButton(12)"
+                style="position: absolute; top: 30vh; left: 35vw"
+              >
+                6인
+              </div>
+              <div
+                id="13"
+                class="cols4seat seat"
+                onclick="SeatButton(13)"
+                style="position: absolute; top: 3vh; left: 55vw"
+              >
+                4인
+              </div>
+              <div
+                id="14"
+                class="cols4seat seat"
+                onclick="SeatButton(14)"
+                style="position: absolute; top: 12vh; left: 55vw"
+              >
+                4인
+              </div>
+              <div
+                id="15"
+                class="cols4seat seat"
+                onclick="SeatButton(15)"
+                style="position: absolute; top: 21vh; left: 55vw"
+              >
+                4인
+              </div>
+              <div
+                id="16"
+                class="less4seat seat"
+                onclick="SeatButton(16)"
+                style="position: absolute; top: 33vh; left: 55vw"
+              >
+                2인
+              </div>
+              <div
+                id="17"
+                class="less4seat seat"
+                onclick="SeatButton(17)"
+                style="position: absolute; top: 0vh; left: 65vw"
+              >
+                2인
+              </div>
+              <div
+                id="18"
+                class="less4seat seat"
+                onclick="SeatButton(18)"
+                style="position: absolute; top: 8vh; left: 65vw"
+              >
+                3인
+              </div>
+              <div
+                id="19"
+                class="less4seat seat"
+                onclick="SeatButton(19)"
+                style="position: absolute; top: 24vh; left: 65vw"
+              >
+                3인
+              </div>
+              <div
+                id="20"
+                class="less4seat seat"
+                onclick="SeatButton(20)"
+                style="position: absolute; top: 40vh; left: 65vw"
+              >
+                3인
+              </div>
+            </div>
+            <div class="rightblank"></div>
+          </div>
+          <!--좌석을 확정하고 예약 정보 입력을 위한 버튼-->
+          <button class="reservetimebutton" onclick="popup()">시간선택</button>
+        </div>
+        <div class="blank"></div>
+      </div>
+      <footer>웹프 실습 14팀</footer>
+    </div>
+  </body>
+</html>

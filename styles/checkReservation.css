@@ -1,12 +1,68 @@
-.ifNoData, .myReservation {
-    display: none;
+.ifNoData {
+  display: none;
+  text-align: center;
+  margin-top: 40%;
+  font-size:30px;
 }
-/* 헤더 15vh 빼고 85vh */
-.myReservation{
-    display: grid;
-    min-height: 85vh;
+
+.fullsize {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 115px 1fr 50px 50px;
 }
-.buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.header {
+  color: #f2f1e7;
+  width: 100%;
+  background-color: #a96851;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+body {
+  background-color: #f2f1e7 !important;
+  margin: 0;
+  padding: 0;
+}
+
+.Main {
+  display: none;
+  vertical-align: middle;
+  line-height: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.fullsize article .Main h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+section {
+  max-height: 75px;
+}
+
+.hint {
+  line-height: 0%;
+  opacity: 50%;
+}
+
+.header .arrow_back {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+section {
+  text-align: center;
+  margin-top: -15px;
+}
+
+.material-icons arrow_back {
+  background-color: transparent;
 }

@@ -1,0 +1,81 @@
+.reserve{
+    width: 100vw;
+    height: 75vh;
+    background-color: rgba(0, 0, 0,0.7);
+    position: absolute;
+    top:15vh;
+    grid-template-columns: 13vw 74vw 13vw;
+    z-index: 1;
+}
+
+.popup{
+    height: 52vh;
+    background-color: white;
+    margin-top:12vh;
+    padding: 10px;
+}
+.close{
+    position:absolute;
+    width: 70px;
+    height: 70px;
+    top:-10px;
+    right:-10px;
+}
+
+.reserveInfo{
+    position:absolute;
+    font-size: 3vh;
+    font-weight: normal;
+    display: inline;
+    color: #ad968d;
+}
+.reserveName{
+    position:absolute;
+    width: 37vw;
+    height: 5vh;
+    left: 27vw;
+    top:9vh;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid #ad968d;
+    color: #ad968d;
+}
+.seatNum{
+    position:absolute;
+    font-size: 3vh;
+    font-weight: normal;
+    display: inline;
+    color: #ad968d;
+}
+
+.inputdate{
+    position:absolute;
+    width: 37vw;
+    height: 5vh;
+    color: #ad968d;
+    align-items: center;
+}
+.input_time{
+    position:absolute;
+    width: 12vw;
+    height: 5vh;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid #ad968d;
+    color: #ad968d;
+}
+
+.reservebutton{
+    background-color : #ad968d;
+    color: #f2f1e7;
+    width: 30vw;
+    height: 9vh;
+    font-size: 3vh;
+    font-weight: bold;
+    border-radius: 21px;
+
+}

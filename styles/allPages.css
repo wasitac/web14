@@ -16,7 +16,7 @@ header {
 }
 
 body {
-  background-color: #f2f1e7;
+  background-color: #f2f1e7 !important;
   margin: 0;
   padding: 0;
 }
@@ -26,4 +26,13 @@ nav {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+
+.check {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #a96851;
+  border: solid 2px #a96851;
+  color: #f2f1e7;
 }
